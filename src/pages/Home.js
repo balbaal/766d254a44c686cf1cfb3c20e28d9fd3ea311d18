@@ -1,14 +1,22 @@
 import React from "react";
 
 // Components
-import { CtaBack } from "elements";
+import { CtaBack, DatePicker } from "elements";
+
+// Utils
+import { getDaysInMonth } from "utils";
 
 class Home extends React.Component {
   render() {
     return (
       <div className="container">
         <CtaBack />
-        <h1>home page</h1>
+        <DatePicker
+          listOfDate={getDaysInMonth(
+            new Date().getMonth(),
+            new Date().getFullYear()
+          )}
+        />
       </div>
     );
   }

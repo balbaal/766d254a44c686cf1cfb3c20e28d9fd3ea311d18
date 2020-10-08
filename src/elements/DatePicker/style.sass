@@ -1,0 +1,43 @@
+@import assets/styles/variable
+
+.date-picker
+  color: $color-red-dark
+  display: flex
+  align-items: center
+  overflow: auto
+  height: 70px
+
+  &__content
+    margin: 0 5px
+    cursor: pointer
+
+    &__wrap
+      width: 50px
+      height: 50px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-radius: 100%
+
+      &__day
+        font-size: 8px
+        color: $color-gray-700
+        margin-bottom: 4px
+
+        &--disabled
+          color: $color-gray-500
+
+      &__date
+        font-size: 16px
+        color: $color-gray-900
+        margin: 0
+
+        &--disabled
+          color: $color-gray-500
+
+      &--selected
+        background-color: $color-gray-900
+
+        h5, h4
+          color: $color-gray-500
