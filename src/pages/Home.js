@@ -40,7 +40,7 @@ class Home extends React.Component {
       <div className="container">
         <div
           style={{
-            margin: "0 -15px 96px",
+            margin: "0 -15px 80px",
             padding: "16px 15px 0",
             position: "sticky",
             backgroundColor: "white",
