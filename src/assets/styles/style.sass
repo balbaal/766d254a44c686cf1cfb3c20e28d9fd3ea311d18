@@ -30,11 +30,24 @@ body
 
 .btn-secondary
   background-color: $color-gray-900
+  border: none
+
+  &:active
+  &:focus
+    box-shadow: none !important
 
 .btn-light
   background-color: $color-gray-300
   color: $color-gray-700
+  border: noneF
+
+  &:active
+  &:focus
+    box-shadow: none !important
 
 .container
   max-width: 375px
   background-color: $bg-white
+
+.shadow-soft
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1) !important

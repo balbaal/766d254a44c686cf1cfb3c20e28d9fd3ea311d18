@@ -42,10 +42,10 @@ class Home extends React.Component {
     return (
       <div className="container">
         <div
-          className="shadow shadow-sm"
+          className="shadow-soft"
           style={{
             margin: "0 -15px 32px",
-            padding: "8px 15px",
+            padding: "16px 15px 8px",
             position: "sticky",
             backgroundColor: "white",
             top: 0,
