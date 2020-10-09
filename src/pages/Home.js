@@ -1,7 +1,8 @@
 import React from "react";
+import { RoomRounded } from "@material-ui/icons";
 
 // Components
-import { CtaBack, DatePicker, Cart } from "elements";
+import { CtaBack, DatePicker, Cart, Input } from "elements";
 import { NavButton, TimeLine, Modal } from "parts";
 
 // Utils
@@ -15,6 +16,7 @@ class Home extends React.Component {
   };
 
   componentDidMount() {
+    return;
     // hide navigation when scroll down
     const elSelect = document.querySelector(".nav-button");
     let prevScroll = window.pageYOffset;
@@ -80,7 +82,16 @@ class Home extends React.Component {
               })
             }
           >
-            Search
+            <Input
+              icon={<RoomRounded />}
+              type="text"
+              value={search}
+              onChange={(e) =>
+                this.setState({ ...this.state, search: e.target.value })
+              }
+            />
+
+            {search.length >= 3 && `Searching map . . .`}
           </Modal>
         )}
       </div>
