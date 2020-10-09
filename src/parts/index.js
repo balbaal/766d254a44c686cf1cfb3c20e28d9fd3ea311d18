@@ -1,3 +1,4 @@
 import NavButton from "./NavButton";
+import TimeLine from "./TimeLIne";
 
-export { NavButton };
+export { NavButton, TimeLine };

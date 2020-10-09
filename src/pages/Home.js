@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 import { CtaBack, DatePicker } from "elements";
-import { NavButton } from "parts";
+import { NavButton, TimeLine } from "parts";
 
 // Utils
 import { getDaysInMonth } from "utils";
@@ -20,6 +20,7 @@ class Home extends React.Component {
         />
 
         <NavButton />
+        <TimeLine />
       </div>
     );
   }
