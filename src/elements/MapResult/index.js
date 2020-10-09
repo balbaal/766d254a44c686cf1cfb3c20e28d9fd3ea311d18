@@ -21,6 +21,10 @@ const MapResult = () => {
           </div>
         );
       })}
+      <div className="map-result__powered">
+        <h1>powered by</h1>
+        <img src="/images/google.png" alt="google" />
+      </div>
     </div>
   );
 };

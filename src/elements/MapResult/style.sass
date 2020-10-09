@@ -9,6 +9,7 @@
     padding: 0 10px
     margin: 16px 0
     width: 100%
+    overflow: hidden
 
     svg
       width: 35px !important
@@ -38,3 +39,23 @@
         overflow: hidden
         text-overflow: ellipsis
         width: 80%
+
+  &__powered
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 15px
+
+    h1
+      font-size: 12px
+      font-weight: bold
+      color: $color-gray-700
+      margin: 0
+
+    img
+      height: 30px
+      margin-left: 4px

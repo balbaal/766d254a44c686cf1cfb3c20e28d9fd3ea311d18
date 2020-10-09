@@ -72,7 +72,7 @@ class Home extends React.Component {
           />
         )}
 
-        {!isShowSearch && (
+        {isShowSearch && (
           <Modal
             title="Cek makanan yang tersedia di lokasi kamu!"
             onClick={() =>
@@ -91,7 +91,7 @@ class Home extends React.Component {
               }
             />
 
-            {10 >= 3 && <MapResult />}
+            {search.length >= 3 && <MapResult />}
           </Modal>
         )}
       </div>
