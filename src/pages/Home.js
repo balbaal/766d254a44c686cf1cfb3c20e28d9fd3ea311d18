@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 import { CtaBack, DatePicker, Cart } from "elements";
-import { NavButton, TimeLine } from "parts";
+import { NavButton, TimeLine, Modal } from "parts";
 
 // Utils
 import { getDaysInMonth } from "utils";
@@ -10,6 +10,8 @@ import { getDaysInMonth } from "utils";
 class Home extends React.Component {
   state = {
     isShowCart: false,
+    isShowSearch: false,
+    search: "",
   };
 
   componentDidMount() {
@@ -33,7 +35,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { isShowCart } = this.state;
+    const { isShowCart, isShowSearch, search } = this.state;
 
     return (
       <div className="container">
@@ -47,7 +49,9 @@ class Home extends React.Component {
             top: 0,
           }}
         >
-          <CtaBack />
+          <CtaBack
+            onClick={() => this.setState({ ...this.state, isShowSearch: true })}
+          />
           <DatePicker
             listOfDate={getDaysInMonth(
               new Date().getMonth(),
@@ -57,9 +61,27 @@ class Home extends React.Component {
 
           <NavButton />
         </div>
-        <TimeLine onClick={() => this.setState({ isShowCart: true })} />
+        <TimeLine
+          onClick={() => this.setState({ ...this.state, isShowCart: true })}
+        />
         {isShowCart && (
-          <Cart onClick={() => this.setState({ isShowCart: false })} />
+          <Cart
+            onClick={() => this.setState({ ...this.state, isShowCart: false })}
+          />
+        )}
+
+        {isShowSearch && (
+          <Modal
+            title="Cek makanan yang tersedia di lokasi kamu!"
+            onClick={() =>
+              this.setState({
+                ...this.state,
+                isShowSearch: false,
+              })
+            }
+          >
+            Search
+          </Modal>
         )}
       </div>
     );

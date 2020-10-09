@@ -1,0 +1,33 @@
+@import assets/styles/variable
+
+.modal-search
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: #42474975
+
+  &__content
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: white
+    border-top-right-radius: 8px
+    border-top-left-radius: 8px
+    padding: 10px 15px
+
+    &__close-btn
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      margin-bottom: 16px
+
+      svg
+        cursor: pointer
+
+    &__main
+      &__title
+        font-size: 24px
+        color: $color-gray-900
