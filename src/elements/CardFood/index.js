@@ -2,7 +2,7 @@ import React from "react";
 import { AddRounded } from "@material-ui/icons";
 
 // Component
-import { Button } from "elements";
+import { Button, Rating } from "elements";
 
 // Style
 import "./style.sass";
@@ -18,6 +18,7 @@ const CardFood = () => {
         />
       </figure>
       <div className="card-food__content">
+        <Rating />
         <h1 className="card-food__content__title">
           Roasted Chicken with Scrambled Egg
         </h1>
