@@ -1,0 +1,40 @@
+@import assets/styles/variable
+
+.map-result
+  margin-top: 24px
+
+  &__item
+    display: flex
+    align-items: center
+    padding: 0 10px
+    margin: 16px 0
+    width: 100%
+
+    svg
+      width: 35px !important
+      height: 35px !important
+      padding: 5px
+      color: $color-gray-700
+      background-color: $color-gray-500
+      margin-right: 16px
+      border-radius: 100%
+      margin-top: -16px
+
+    &__text
+      padding-bottom: 16px
+      border-bottom: 1px solid $color-gray-500
+      width: 100%
+
+      h1
+        color: $color-gray-900
+        font-size: 16px
+        margin-bottom: 8px
+
+      h2
+        color: $color-gray-700
+        font-size: 14px
+        margin: 0
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        width: 80%

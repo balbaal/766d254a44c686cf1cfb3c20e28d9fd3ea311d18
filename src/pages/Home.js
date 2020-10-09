@@ -2,7 +2,7 @@ import React from "react";
 import { RoomRounded } from "@material-ui/icons";
 
 // Components
-import { CtaBack, DatePicker, Cart, Input } from "elements";
+import { CtaBack, DatePicker, Cart, Input, MapResult } from "elements";
 import { NavButton, TimeLine, Modal } from "parts";
 
 // Utils
@@ -72,7 +72,7 @@ class Home extends React.Component {
           />
         )}
 
-        {isShowSearch && (
+        {!isShowSearch && (
           <Modal
             title="Cek makanan yang tersedia di lokasi kamu!"
             onClick={() =>
@@ -91,7 +91,7 @@ class Home extends React.Component {
               }
             />
 
-            {search.length >= 3 && `Searching map . . .`}
+            {10 >= 3 && <MapResult />}
           </Modal>
         )}
       </div>
