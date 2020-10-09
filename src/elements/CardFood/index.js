@@ -26,6 +26,7 @@ const CardFood = () => {
         <div className="card-food__content__footer">
           <h3 className="card-food__content__footer__price">Rp 35,000</h3>
           <Button
+            onClick={() => alert("add item")}
             title={
               <>
                 ADD <AddRounded />

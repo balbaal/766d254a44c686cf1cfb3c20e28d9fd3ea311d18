@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { CtaBack, DatePicker } from "elements";
+import { CtaBack, DatePicker, Cart } from "elements";
 import { NavButton, TimeLine } from "parts";
 
 // Utils
@@ -52,6 +52,7 @@ class Home extends React.Component {
           <NavButton />
         </div>
         <TimeLine />
+        <Cart />
       </div>
     );
   }
