@@ -11,15 +11,20 @@ class Home extends React.Component {
   render() {
     return (
       <div className="container">
-        <CtaBack />
-        <DatePicker
-          listOfDate={getDaysInMonth(
-            new Date().getMonth(),
-            new Date().getFullYear()
-          )}
-        />
+        <div
+          className="shadow shadow-sm"
+          style={{ margin: "0 -15px 32px", padding: "8px 15px" }}
+        >
+          <CtaBack />
+          <DatePicker
+            listOfDate={getDaysInMonth(
+              new Date().getMonth(),
+              new Date().getFullYear()
+            )}
+          />
 
-        <NavButton />
+          <NavButton />
+        </div>
         <TimeLine />
       </div>
     );
