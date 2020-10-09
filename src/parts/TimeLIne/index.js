@@ -7,13 +7,13 @@ import { CardFood } from "elements";
 // Style
 import "./style.sass";
 
-const TimeLine = () => {
+const TimeLine = ({ onClick }) => {
   return (
     <div className="time-line-foods">
       <h1 className="time-line-foods__date">Kamis, 13 Maret 2019</h1>
       <div className="time-line-foods__grid-template">
-        {[1, 3, 5].map((item) => (
-          <CardFood />
+        {[1, 3, 5, 5, 6].map((item, i) => (
+          <CardFood key={i} onClick={onClick} />
         ))}
       </div>
     </div>

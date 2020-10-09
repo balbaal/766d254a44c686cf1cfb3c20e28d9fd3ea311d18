@@ -4,9 +4,9 @@ import { ShoppingCartOutlined, NavigateNextRounded } from "@material-ui/icons";
 // style
 import "./style.sass";
 
-const Cart = () => {
+const Cart = ({ onClick }) => {
   return (
-    <div className="cart-add container">
+    <div onClick={onClick} className="cart-add container">
       <div className="cart-add__content">
         <div className="cart-add__content__text">
           <h3 className="cart-add__content__text__item-price">

@@ -7,7 +7,7 @@ import { Button, Rating } from "elements";
 // Style
 import "./style.sass";
 
-const CardFood = () => {
+const CardFood = ({ onClick }) => {
   return (
     <div className="card-food shadow shadow-sm">
       <figure className="card-food__figure">
@@ -26,7 +26,7 @@ const CardFood = () => {
         <div className="card-food__content__footer">
           <h3 className="card-food__content__footer__price">Rp 35,000</h3>
           <Button
-            onClick={() => alert("add item")}
+            onClick={onClick}
             title={
               <>
                 ADD <AddRounded />

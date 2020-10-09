@@ -8,6 +8,10 @@ import { NavButton, TimeLine } from "parts";
 import { getDaysInMonth } from "utils";
 
 class Home extends React.Component {
+  state = {
+    isShowCart: false,
+  };
+
   componentDidMount() {
     // hide navigation when scroll down
     const elSelect = document.querySelector(".nav-button");
@@ -29,6 +33,8 @@ class Home extends React.Component {
   }
 
   render() {
+    const { isShowCart } = this.state;
+
     return (
       <div className="container">
         <div
@@ -51,8 +57,10 @@ class Home extends React.Component {
 
           <NavButton />
         </div>
-        <TimeLine />
-        <Cart />
+        <TimeLine onClick={() => this.setState({ isShowCart: true })} />
+        {isShowCart && (
+          <Cart onClick={() => this.setState({ isShowCart: false })} />
+        )}
       </div>
     );
   }
