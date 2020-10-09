@@ -11,7 +11,7 @@ const DatePicker = ({ listOfDate }) => {
     <div className="date-picker">
       {listOfDate.map((date, i) => {
         return (
-          <div className="date-picker__content">
+          <div key={i} className="date-picker__content">
             <div
               className={`date-picker__content__wrap ${
                 date.getDate() === new Date().getDate() &&
