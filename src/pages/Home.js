@@ -16,22 +16,19 @@ class Home extends React.Component {
   };
 
   componentDidMount() {
-    return;
     // hide navigation when scroll down
-    const elSelect = document.querySelector(".nav-button");
+    const elSelect = document.querySelector(".shadow-soft");
     let prevScroll = window.pageYOffset;
 
     window.addEventListener("scroll", () => {
       let currentScroll = window.pageYOffset;
 
       if (prevScroll < currentScroll) {
-        elSelect.classList.add("hide");
+        elSelect.classList.add("d-none");
       } else if (prevScroll > currentScroll) {
-        elSelect.classList.remove("hide");
+        elSelect.classList.remove("d-none");
       }
 
-      console.log("prevScroll :>> ", prevScroll);
-      console.log("currentScroll :>> ", currentScroll);
       prevScroll = currentScroll;
     });
   }
@@ -42,10 +39,9 @@ class Home extends React.Component {
     return (
       <div className="container">
         <div
-          className="shadow-soft"
           style={{
-            margin: "0 -15px 32px",
-            padding: "16px 15px 8px",
+            margin: "0 -15px 96px",
+            padding: "16px 15px 0",
             position: "sticky",
             backgroundColor: "white",
             top: 0,
@@ -60,7 +56,18 @@ class Home extends React.Component {
               new Date().getFullYear()
             )}
           />
-
+        </div>
+        <div
+          className="container shadow-soft"
+          style={{
+            position: "fixed",
+            top: "122px",
+            left: 0,
+            right: 0,
+            backgroundColor: "white",
+            padding: "8px 15px",
+          }}
+        >
           <NavButton />
         </div>
         <TimeLine
