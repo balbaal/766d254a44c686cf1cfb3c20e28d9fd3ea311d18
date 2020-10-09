@@ -15,6 +15,18 @@ body
 
 .btn-primary
   background-color: $color-red
+  border: none
+
+  &:hover
+    background-color: $color-red-dark
+
+  &:active
+    background-color: $color-red-dark !important
+    box-shadow: none !important
+
+  &:focus
+    background-color: $color-red
+    box-shadow: none
 
 .btn-secondary
   background-color: $color-gray-900

@@ -30,7 +30,7 @@ const CardFood = () => {
                 ADD <AddRounded />
               </>
             }
-            className="btn-primary d-flex"
+            className="btn-primary d-flex card-food__content__footer__btn"
           />
         </div>
       </div>
