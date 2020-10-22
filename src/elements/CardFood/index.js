@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { AddRounded } from "@material-ui/icons";
 
 // Component
@@ -8,6 +8,9 @@ import { Button, Rating } from "elements";
 import "./style.sass";
 
 const CardFood = ({ onClick }) => {
+  const __handleOnClick = useCallback(() => {
+    onClick();
+  }, []);
   return (
     <div className="card-food shadow shadow-sm">
       <figure className="card-food__figure">
@@ -26,7 +29,7 @@ const CardFood = ({ onClick }) => {
         <div className="card-food__content__footer">
           <h3 className="card-food__content__footer__price">Rp 35,000</h3>
           <Button
-            onClick={onClick}
+            onClick={__handleOnClick}
             title={
               <>
                 ADD <AddRounded />

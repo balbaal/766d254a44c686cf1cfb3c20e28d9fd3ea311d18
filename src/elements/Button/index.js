@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const Button = ({ style, title, className, onClick }) => {
+const Button = memo(({ style, title, className, onClick }) => {
   return (
     <button
       style={{ style }}
@@ -10,6 +10,6 @@ const Button = ({ style, title, className, onClick }) => {
       {title}
     </button>
   );
-};
+});
 
 export default Button;

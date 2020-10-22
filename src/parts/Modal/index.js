@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { CloseRounded } from "@material-ui/icons";
 
 // style
 import "./style.sass";
 
-const Modal = ({ children, onClick, title }) => {
+const Modal = memo(({ children, onClick, title }) => {
   return (
     <div className="modal-search container">
       <div className="modal-search__content container">
@@ -18,6 +18,6 @@ const Modal = ({ children, onClick, title }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Modal;

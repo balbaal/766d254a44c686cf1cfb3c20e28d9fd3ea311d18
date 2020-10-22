@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { ShoppingCartOutlined, NavigateNextRounded } from "@material-ui/icons";
 
 // style
 import "./style.sass";
 
-const Cart = ({ onClick }) => {
+const Cart = memo(({ onClick }) => {
   return (
     <div onClick={onClick} className="cart-add container">
       <div className="cart-add__content">
@@ -22,6 +22,6 @@ const Cart = ({ onClick }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Cart;

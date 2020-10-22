@@ -33,6 +33,10 @@ class Home extends React.Component {
     });
   }
 
+  __handleShowCart = (val) => {
+    this.setState({ ...this.state, isShowCart: val });
+  };
+
   render() {
     const { isShowCart, isShowSearch, search } = this.state;
 
@@ -70,14 +74,8 @@ class Home extends React.Component {
         >
           <NavButton />
         </div>
-        <TimeLine
-          onClick={() => this.setState({ ...this.state, isShowCart: true })}
-        />
-        {isShowCart && (
-          <Cart
-            onClick={() => this.setState({ ...this.state, isShowCart: false })}
-          />
-        )}
+        <TimeLine onClick={() => this.__handleShowCart(true)} />
+        {isShowCart && <Cart onClick={() => this.__handleShowCart(false)} />}
 
         {isShowSearch && (
           <Modal

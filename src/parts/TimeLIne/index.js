@@ -1,5 +1,4 @@
-import { Timeline } from "@material-ui/icons";
-import React from "react";
+import React, { memo } from "react";
 
 // Component
 import { CardFood } from "elements";
@@ -7,7 +6,7 @@ import { CardFood } from "elements";
 // Style
 import "./style.sass";
 
-const TimeLine = ({ onClick }) => {
+const TimeLine = memo(({ onClick }) => {
   return (
     <div className="time-line-foods">
       <h1 className="time-line-foods__date">Kamis, 13 Maret 2019</h1>
@@ -18,6 +17,6 @@ const TimeLine = ({ onClick }) => {
       </div>
     </div>
   );
-};
+});
 
 export default TimeLine;

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { RoomRounded } from "@material-ui/icons";
 
 // style
 import "./style.sass";
 
-const MapResult = () => {
+const MapResult = memo(() => {
   return (
     <div className="map-result">
       {[2, 3, 5].map((map, i) => {
@@ -27,6 +27,6 @@ const MapResult = () => {
       </div>
     </div>
   );
-};
+});
 
 export default MapResult;
